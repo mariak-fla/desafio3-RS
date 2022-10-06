@@ -24,7 +24,7 @@ body {
 
 body::before {
     content: '';
-    height: 436px;
+    height: 56vh;
     width: 100%;
     background: var(--primary);
     top: 0;
@@ -34,12 +34,14 @@ body::before {
 
 .page {
     width: 750px;
+    max-width: 90%;
     margin: auto;
 }
 
 header {
     color: white;
-    width: 420px;
+    width: 360px;
+    max-width: 90%;
 }
 
 header h1 {
@@ -48,27 +50,28 @@ header h1 {
     font-weight: 400;
     font-size: 48px;
     line-height: 60px;
-    margin-top: 140px;
+    margin-top: 17vh;
 }
 
 header p {
     font-family: 'Poppins';
     font-size: 20px;
     line-height: 30px;
-    margin-top: 18px;
-    margin-bottom: 60px;
+    margin-top: 2vh;
+    margin-bottom: 8vh;
 }
 
 form {
     background-color: white;
     border-radius: 20px 20px 0 0;
     width: 750px;
-    padding: 65px;
+    max-width: 90vw;
+    padding: 8vh;
     margin: auto;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5vh;
 }
 
 form h2 {
@@ -96,11 +99,15 @@ fieldset legend {
     padding-bottom: 16px;
     border-bottom: 1px solid var(--fourth);
     margin-bottom: 36px;
+
+    max-width: 100%;
 }
 
 .input-wrapper {
     display: flex;
     flex-direction: column;
+    
+    max-width: 100%;
 }
 
 .input-wrapper label {
@@ -108,6 +115,8 @@ fieldset legend {
     line-height: 24px;
     color: var(--primary);
     margin-bottom: 8px;
+
+    max-width: 100%;
 }
 
 .input-wrapper label span {
@@ -120,7 +129,7 @@ fieldset legend {
 }
 
 .input-wrapper label span:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .input-wrapper input {
@@ -134,10 +143,12 @@ fieldset legend {
 footer {
     background-color: var(--primary);
     width: 750px;
+    max-width: 90vw;
     margin: auto;
-    padding: 50px 71px;
+    padding: 50px 71px 50px 71px;
     border-radius: 0 0 20px 20px;
-    margin-bottom: 200px;
+    
+    margin-bottom: 15vh;
 }
 
 footer .button {
@@ -145,6 +156,7 @@ footer .button {
     color: white;
     border: none;
     width: 608px;
+    max-width: 67vw;
     height: 55px;
     border-radius: 20px;
 
@@ -161,9 +173,9 @@ footer .button:hover {
     cursor: pointer;
 }
 
-input:invalid {
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
+input:focus {
+    background-color: var(--fourth);
+    color: var(--primary);
 }
 
 .col-2 {
@@ -171,8 +183,8 @@ input:invalid {
     gap: 22px;
 }
 
-.col-2 .input-wrapper {
-    width: 300px;
+.col-2 .input-wrapper, .col-3 .input-wrapper {
+    width: 100%;
 }
 
 .col-3 {
@@ -180,11 +192,7 @@ input:invalid {
     gap: 10px;
 }
 
-.col-3 .input-wrapper {
-    width: 140px;
-}
-
 .col-3 > div:nth-child(1) {
-    width: 300px;
+    width: 100%;
     margin-right: 22px;
 }
